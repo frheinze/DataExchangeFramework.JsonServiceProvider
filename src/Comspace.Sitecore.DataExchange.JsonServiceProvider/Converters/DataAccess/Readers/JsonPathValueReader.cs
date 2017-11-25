@@ -1,13 +1,12 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Linq.JsonPath;
 using Sitecore.DataExchange;
 using Sitecore.DataExchange.DataAccess;
 
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.DataAccess.Readers
 {
     /// <summary>
-    /// Reader for JSON Objects by JSON Path (see https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm). <br/>    
+    /// Reader for JSON Objects by JSON Path (see http://goessner.net/articles/JsonPath/). <br/>    
     /// Test path: http://jsonpath.com/
     /// </summary>
     public class JsonPathValueReader : IValueReader

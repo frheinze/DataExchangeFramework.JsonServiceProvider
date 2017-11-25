@@ -1,7 +1,7 @@
 # Json Service Provider for Data Exchange Framework
 
 ## Introduction
-The Json Service Provider is a flexible sample provider for Data Exchange Framework to read JSON data from external webservices. The clue is, that you can configure the value accessors with JSON Path (see https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm)
+The Json Service Provider is a flexible sample provider for Data Exchange Framework to read JSON data from external webservices. The clue is, that you can configure the value accessors with JSON Path (see http://goessner.net/articles/JsonPath/)
 
 This repository includes 
  * Visual Studio project with the source code

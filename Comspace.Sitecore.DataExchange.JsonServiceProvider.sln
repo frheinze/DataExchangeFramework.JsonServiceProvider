@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{BDEB8845-88AC-44E8-A12C-F5D742B355E6}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		NuGet.config = NuGet.config
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comspace.Sitecore.DataExchange.JsonServiceProvider", "src\Comspace.Sitecore.DataExchange.JsonServiceProvider\Comspace.Sitecore.DataExchange.JsonServiceProvider.csproj", "{04575FDB-16D7-4295-A4CC-82744F566A6A}"
