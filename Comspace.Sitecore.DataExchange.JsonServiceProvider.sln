@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{BDEB8845-88AC-44E8-A12C-F5D742B355E6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comspace.Sitecore.DataExchange.JsonServiceProvider", "src\Comspace.Sitecore.DataExchange.JsonServiceProvider\Comspace.Sitecore.DataExchange.JsonServiceProvider.csproj", "{04575FDB-16D7-4295-A4CC-82744F566A6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04575FDB-16D7-4295-A4CC-82744F566A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04575FDB-16D7-4295-A4CC-82744F566A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04575FDB-16D7-4295-A4CC-82744F566A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04575FDB-16D7-4295-A4CC-82744F566A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A5B3114-A7E7-45DB-AB96-73FF6754A319}
+	EndGlobalSection
+EndGlobal
