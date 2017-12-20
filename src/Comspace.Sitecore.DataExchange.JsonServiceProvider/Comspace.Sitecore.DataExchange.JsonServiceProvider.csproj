@@ -67,7 +67,7 @@
     <Compile Include="Models\ReadJsonServiceStepItemModel.cs" />
     <Compile Include="Plugins\JsonServiceEndpointSettings.cs" />
     <Compile Include="Plugins\ReadJsonObjectsSettings.cs" />
-    <Compile Include="Processors\BasePipelineStepWithEndpointAndIdentifier.cs" />
+    <Compile Include="Processors\BasePipelineStepWithEndpointAndIdentifierProcessor.cs" />
     <Compile Include="Processors\ReadJsonObjectsStepProcessor.cs" />
     <Compile Include="Processors\ReadJsonObjectStepProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

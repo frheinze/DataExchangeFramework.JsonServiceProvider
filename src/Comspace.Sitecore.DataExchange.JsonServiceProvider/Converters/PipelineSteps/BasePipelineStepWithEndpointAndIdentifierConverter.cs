@@ -9,9 +9,9 @@ using Sitecore.Services.Core.Model;
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.PipelineSteps
 {
     /// <summary>
-    /// Converter for pipeline step <see cref="BasePipelineStepWithEndpointAndIdentifier"/>.
+    /// Converter for pipeline step <see cref="BasePipelineStepWithEndpointAndIdentifierProcessor"/>.
     /// </summary>
-    public abstract class BasePipelineStepWithEndpointAndIdentifierConverter : BasePipelineStepConverter
+    public abstract class BasePipelineStepWithEndpointAndIdentifierConverter : BaseResolveObjectFromEndpointStepConverter
     {
         protected BasePipelineStepWithEndpointAndIdentifierConverter(IItemModelRepository repository)
             : base(repository)
@@ -20,17 +20,8 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.Pipeline
 
         protected override void AddPlugins(ItemModel source, PipelineStep pipelineStep)
         {
-            AddEndpointSettings(source, pipelineStep);
+            base.AddPlugins(source, pipelineStep);
             AddIdentifierSettings(source, pipelineStep);
-        }
-
-        public virtual void AddEndpointSettings(ItemModel source, PipelineStep pipelineStep)
-        {
-            var endpointSettings = new EndpointSettings
-            {
-                EndpointFrom = ConvertReferenceToModel<Endpoint>(source, "EndpointFrom")
-            };
-            pipelineStep.Plugins.Add(endpointSettings);
         }
 
         public virtual void AddIdentifierSettings(ItemModel source, PipelineStep pipelineStep)

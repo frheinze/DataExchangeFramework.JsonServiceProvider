@@ -9,10 +9,10 @@ using Sitecore.DataExchange.Processors.PipelineSteps;
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
 {
     /// <summary>
-    /// Base class for pipeline steps with endpoint and identifier property.
+    /// Base class for pipeline steps with endpoint, identifier and resolved object location property.
     /// </summary>
-    [RequiredPipelineStepPlugins(typeof(EndpointSettings), typeof(ResolveIdentifierSettings))]
-    public abstract class BasePipelineStepWithEndpointAndIdentifier : BasePipelineStepWithEndpointsProcessor
+    [RequiredPipelineStepPlugins(typeof(EndpointSettings), typeof(ResolveIdentifierSettings), typeof(ResolveObjectSettings))]
+    public abstract class BasePipelineStepWithEndpointAndIdentifierProcessor : BasePipelineStepWithEndpointsProcessor
     {
         protected virtual string GetIdentifierValue(PipelineStep pipelineStep, PipelineContext pipelineContext)
         {

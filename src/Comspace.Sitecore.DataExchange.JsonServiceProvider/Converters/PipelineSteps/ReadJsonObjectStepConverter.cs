@@ -1,6 +1,10 @@
-﻿using Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors;
+﻿using Comspace.Sitecore.DataExchange.JsonServiceProvider.Models;
+using Comspace.Sitecore.DataExchange.JsonServiceProvider.Plugins;
+using Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors;
 using Sitecore.DataExchange.Attributes;
+using Sitecore.DataExchange.Models;
 using Sitecore.DataExchange.Repositories;
+using Sitecore.Services.Core.Model;
 
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.PipelineSteps
 {
@@ -13,6 +17,17 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.Pipeline
         public ReadJsonObjectStepConverter(IItemModelRepository repository)
             : base(repository)
         {
+        }
+
+        protected override void AddPlugins(ItemModel source, PipelineStep pipelineStep)
+        {
+            base.AddPlugins(source, pipelineStep);
+
+            var settings = new ReadJsonObjectsSettings
+            {
+                RootJsonPath = GetStringValue(source, ReadJsonServiceStepItemModel.RootJsonPath)
+            };
+            pipelineStep.Plugins.Add(settings);
         }
     }
 }

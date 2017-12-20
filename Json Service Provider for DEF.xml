@@ -1,0 +1,194 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Json Service Provider for Data Exchange Framework</PackageName>
+      <Author>Friederike Heinze</Author>
+      <Version>1.4.1.2</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>Prerequisites:
+- Sitecore Data Exchange Framework 1.4.1</Readme>
+      <Publisher>Friederike Heinze</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Settings/Rules/Insert Options/Rules/Data Exchange - Json Service Provider/{F3796189-DCD5-40E3-8AD3-5D9AA108C39B}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Rules</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/Comspace.Sitecore.DataExchange.JsonServiceProvider.dll</x-item>
+        <x-item>/bin/Comspace.Sitecore.DataExchange.JsonServiceProvider.pdb</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Libs</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/{F13E8FE0-5A8C-4AB1-9484-456A41A7C6A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/{671899B3-6DC4-4D9A-9C61-426BD86CE78B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Apply Mapping Rules/{98D0E8F2-B73D-48AC-B2E7-E5D4299CC230}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Mapping/{DF67C9F0-27FA-49E3-A399-9E34CAAF1056}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Mappings Applied Action Rules/{278D13C4-5C2F-407D-AA66-0A8A89E5F5D8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Mappings Applied Actions/{E69EBA6F-2A02-4EAE-9F74-E9C728F34B5E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessor Sets/{CBE730EB-42AB-4A18-8F33-7BD1BC28555B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessor Sets/Json Property Value Accessor Set/__Standard Values/{EDF773FA-21C2-42FC-B32B-96EFEE770452}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessor Sets/Json Property Value Accessor Set/{C6184742-32B3-4A83-896C-DC8F21F26BE8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessors/{B139952F-8ED6-4C36-87F9-0F8B5049A4BD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessors/Json Path Value Accessor/__Standard Values/{194E05BF-B5DA-47A4-B100-37B346AAAE78}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessors/Json Path Value Accessor/{D5EE3E8B-E49A-4C88-8E98-F5BA7C535A73}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessors/Json Path Value Accessor/Property/{58D4F945-488C-4AF7-8781-C6E8F5B2F5B8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Accessors/Json Path Value Accessor/Property/JsonPath/{C3C0F13E-E40A-4BB7-BC89-5B8CE7BC1C8C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Readers/{827C9A6C-647D-4D0D-B6A6-B83B1DC00CEE}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Data Access/Value Writers/{E9C1A951-B3CC-4131-8C4F-E3C412EE113F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/{F32D6315-F9E6-4B5C-8AFE-D9CF11D5031F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/__Standard Values/{F67F56B4-C704-4C39-B858-ED39275C9251}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/{F5E106FC-6A3C-41EB-8C34-A896628155C2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Api/{FC4A2CEE-D6BA-4F7B-ADD4-BC95DDCDBFF9}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Api/GetAll/{CE177FD5-972D-4FD8-A3DB-44369A2F495B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Api/GetById/{863CFCA9-EBEF-4FFA-B9E9-135D1B0D7BE8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Authorization Header/{4E9B5A31-FC7B-42E6-A79A-9A38F6CD3E6F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Authorization Header/Parameter/{C51264A8-57DC-4902-9894-D031527CC9A0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/Authorization Header/Scheme/{48D89CCC-EE15-4F3A-9FDE-1A79DAA51EDF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/General/{D85A5945-5AB7-4384-BCF3-764D847EDF6A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/General/Host/{1AC48483-FD1E-4E01-B2AD-1EF42E97F2A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Endpoints/Json Service Endpoint/General/Protocol/{CFDDD7D1-22A3-4676-B1E4-1861B94D1B52}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/{D74B026E-2BA8-4AF9-B868-E49C9768D851}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Apply Mapping Rules Root/__Standard Values/{ADC6C5C5-4F8A-423B-BEDF-84E16CBDE6B9}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Apply Mapping Rules Root/{3CEEC4C0-F2C5-4394-8AA6-19046E189124}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Endpoints Root/__Standard Values/{935CCF83-8E95-4987-A670-AD2FCC7C8489}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Endpoints Root/{566FFC56-7820-4566-ADE8-EA4DE876BFF1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Mappings Applied Action Rules Root/__Standard Values/{9E4D0CBF-A261-419C-870D-05E6557FB04E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Mappings Applied Action Rules Root/{739146D3-6586-4F1A-BA31-DE835BDC3E0F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Mappings Applied Actions Root/__Standard Values/{7DB6FF46-74BE-4F41-8BAC-6FDF8EFBED7A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Mappings Applied Actions Root/{2C3D3D1E-E004-42F0-9F3D-540990ECC8DD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Queue Processors Root/__Standard Values/{FA3E53A8-B975-48D7-B4AA-4AD6272F3A4B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Queue Processors Root/{33ACADD3-37B4-479B-A450-18BCDBF74A74}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Tenant Settings Root/__Standard Values/{3BD45922-B200-4E61-9D0C-C39E072B3B4D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Tenant Settings Root/{EB6E7C91-87A5-491D-9044-1EC7D2875E09}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Accessor Sets Root/__Standard Values/{95EF5BAE-6BB3-4F35-8FFF-5F97B913EB5E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Accessor Sets Root/{E8901F97-FDA2-42FB-AE56-EF78A851B17E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Accessors Root/__Standard Values/{23D2CC76-D4D8-4D2C-9916-49FC5C0E4695}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Accessors Root/{F52ACCF7-67B6-4CFE-B3F1-27A4D37A4C79}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Readers Root/__Standard Values/{493496D6-0CA0-4EC8-90E1-B42C1DEC5E1B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Readers Root/{9B85F42F-A2C4-4B1F-922D-FCEBC5CFA4F9}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Writers Root/__Standard Values/{3C3EABE8-3135-44C6-8DE2-452CC1F246FC}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Folders/Json Service Value Writers Root/{332101A6-18CD-498C-A55E-DF330F94A0C7}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/{C21C4566-5A7C-4F68-84C4-C4F56D9DF54C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Base Read Json Pipeline Step/{8D016E89-2970-4FF7-AEF6-EF85FB75096B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Base Read Json Pipeline Step/Endpoints/{AB42CEBD-F7B0-4FD5-9EA9-5BD972039D0F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Base Read Json Pipeline Step/Endpoints/EndpointFrom/{1A055A49-67B3-4CA2-AB71-BD9E2F61C246}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Base Read Json Pipeline Step/Endpoints/RootJsonPath/{3F8A57F1-E043-46E0-B264-ED1C3F1B1DD2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Read Json Object Step/__Standard Values/{BD1A0C1D-D27F-4841-B69B-AED3A89E5480}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Read Json Object Step/{8655A7CE-C734-48CC-B06B-265E7892A537}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Read Json Objects Step/__Standard Values/{6241D4BF-5234-4465-8428-0B6F588D77E8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Pipeline Steps/Read Json Objects Step/{A909A821-9537-4591-B769-92E43AF2402B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Exchange/Providers/Json Service/Queue Processors/{8D675668-4201-4FB3-922F-849C06CE44C1}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Templates</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/{4F030F18-781A-4390-A4F9-908970F68BD2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Branches/{70F87722-7AC9-4F81-865D-A7F0764794CF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/{11EB4E13-4927-4396-9F99-ADF649EE19AC}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Apply Mapping Rules/{3A499B7C-0C38-4746-93FE-6A77690C7319}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Apply Mapping Rules/New Item Settings/{EC8237E0-E931-4B3C-963A-9836C4FCF391}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Endpoints/{C0DE075A-D3E7-455E-8288-ADC5429FD000}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Endpoints/New Item Settings/{E7C2BBC6-82EF-42EC-8A8F-E858CF62365C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Mappings Applied Action Rules/{8584AC34-01E3-4E51-8492-A32FDC62DA52}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Mappings Applied Action Rules/New Item Settings/{E64D1CA0-3739-4F6F-81EC-93128411455B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Mappings Applied Actions/{A9D15E02-8F1F-4ED1-969B-6B0C1C12D843}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Mappings Applied Actions/New Item Settings/{D96CA5EA-81C1-4CA6-B2A7-3C4187D381C4}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Queue Processors/{0A483DFD-BB21-4EEB-822C-226BA0488D4E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Queue Processors/New Item Settings/{DC9E81D0-C741-4990-A293-0841D83278B2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Tenant Settings/{9D21449D-886F-4BC6-A15C-DC78CDBD2E8F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Tenant Settings/New Item Settings/{D33666E2-CDF3-4E4A-A6BA-93C8148D752C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Accessor Sets/{7D3865EE-A390-478D-95B5-5DE7EFA63007}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Accessor Sets/New Item Settings/{3958506C-B565-485C-92DA-527E8542A3F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Accessors/{4BFF08EB-E2F9-4491-BB9A-1CCAE2A301C2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Accessors/New Item Settings/{CEF12D83-D1C9-4D6C-90A4-2089B5CD024F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Readers/{0FA0558B-9C94-48FB-89A8-44082FDFB1AA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Readers/New Item Settings/{F803EB07-F103-45C1-ACD9-32B494E6D390}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Writers/{1255E4A0-D091-46CA-90CF-F3667E10E22E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Commands/Json Service Value Writers/New Item Settings/{6B86E988-1FC4-40B8-9EE4-B86F947647AF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Data Exchange/Providers/Json Service/Tenants/{794E3F1D-D2A4-4F68-84C6-BC3757079BD7}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Branches</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

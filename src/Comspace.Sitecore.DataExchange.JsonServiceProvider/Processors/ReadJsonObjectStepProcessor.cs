@@ -9,14 +9,12 @@ using Sitecore.DataExchange.Contexts;
 using Sitecore.DataExchange.Extensions;
 using Sitecore.DataExchange.Models;
 using Sitecore.DataExchange.Plugins;
-using Sitecore.Services.Core.Diagnostics;
-using Sitecore.Services.Core.Model;
 
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
 {
     [RequiredEndpointPlugins(typeof(JsonServiceEndpointSettings))]
-    [RequiredPipelineStepPlugins(typeof(ResolveIdentifierSettings))]
-    public class ReadJsonObjectStepProcessor : BasePipelineStepWithEndpointAndIdentifier
+    [RequiredPipelineStepPlugins(typeof(EndpointSettings), typeof(ResolveIdentifierSettings), typeof(ResolveObjectSettings), typeof(ReadJsonObjectsSettings))]
+    public class ReadJsonObjectStepProcessor : BasePipelineStepWithEndpointAndIdentifierProcessor
     {
         public override bool CanProcess(PipelineStep pipelineStep, PipelineContext pipelineContext)
         {
@@ -28,14 +26,14 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
                 var endpointFrom = endpointSettings.EndpointFrom;
                 if (endpointFrom == null)
                 {
-                    logger.Error("Pipeline processing will abort because the pipeline step is missing an endpoint to read from. (pipeline step: {0}, plugin: {1}, property: {2})", (object)pipelineStep.Name, (object)typeof(EndpointSettings).FullName, (object)"EndpointFrom");
+                    logger.Error("Pipeline processing will abort because the pipeline step is missing an endpoint to read from. (pipeline step: {0}, plugin: {1}, property: {2})", pipelineStep.Name, typeof(EndpointSettings).FullName, "EndpointFrom");
                 }
                 else if (IsEndpointValid(endpointFrom, pipelineStep, pipelineContext))
                 {
                     var synchronizationSettings = pipelineContext.GetSynchronizationSettings();
-                    if (!(synchronizationSettings.Source is ItemModel))
+                    if (synchronizationSettings.Source == null)
                     {
-                        logger.Error("Pipeline processing will abort because the pipeline context has no (valid) source assigned. (pipeline step: {0}, plugin: {1}, property: {2})", (object)pipelineStep.Name, (object)typeof(SynchronizationSettings).FullName, (object)"Source");
+                        logger.Error("Pipeline processing will abort because the pipeline context has no source assigned. (pipeline step: {0}, plugin: {1}, property: {2})", pipelineStep.Name, typeof(SynchronizationSettings).FullName, "Source");
                     }
                     else
                     {
@@ -65,21 +63,37 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
 
         public override void Process(PipelineStep pipelineStep, PipelineContext pipelineContext)
         {
-            ILogger logger = pipelineContext.PipelineBatchContext.Logger;
+            var logger = pipelineContext.PipelineBatchContext.Logger;
             if (CanProcess(pipelineStep, pipelineContext))
             {
-                string identifierValue = GetIdentifierValue(pipelineStep, pipelineContext);
+                var identifierValue = GetIdentifierValue(pipelineStep, pipelineContext);
                 if (string.IsNullOrWhiteSpace(identifierValue))
                 {
                     logger.Error("Pipeline step processing will abort because no identifier value was resolved. (pipeline step: {0})", (object)pipelineStep.Name);
                 }
                 else
                 {
-                    JObject resolvedObject = ResolveObject(identifierValue, pipelineStep.GetEndpointSettings().EndpointFrom, pipelineStep, pipelineContext);
+                    var resolvedObject = ResolveObject(identifierValue, pipelineStep.GetEndpointSettings().EndpointFrom, pipelineStep, pipelineContext);
 
-                    SynchronizationSettings synchronizationSettings = pipelineContext.GetSynchronizationSettings();
-                    synchronizationSettings.Target = resolvedObject;
+                    SaveResolvedObject(pipelineStep, pipelineContext, resolvedObject);
                 }
+            }
+        }
+
+        protected virtual void SaveResolvedObject(PipelineStep pipelineStep, PipelineContext pipelineContext, JObject resolvedObject)
+        {
+            var resolveObjectSettings = pipelineStep.GetResolveObjectSettings();
+            var synchronizationSettings = pipelineContext.GetSynchronizationSettings();
+
+            var resolvedObjectLocation = resolveObjectSettings?.ResolvedObjectLocation;
+            if (!string.IsNullOrWhiteSpace(resolvedObjectLocation)
+                && resolvedObjectLocation.Equals("Pipeline Context Source"))
+            {
+                synchronizationSettings.Source = resolvedObject;
+            }
+            else
+            {
+                synchronizationSettings.Target = resolvedObject; //Default
             }
         }
 
@@ -117,6 +131,24 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
                              ex.GetBaseException().Message, endpointSettings.Host, endpointSettings.Protocol, endpointSettings.GetById);
                 pipelineContext.CriticalError = true;
             }
+
+            if (result != null)
+            {
+                //select root node
+                var readJsonObjectsSetting = pipelineStep.GetPlugin<ReadJsonObjectsSettings>();
+                if (!string.IsNullOrEmpty(readJsonObjectsSetting?.RootJsonPath))
+                {
+                    try
+                    {
+                        result = result.SelectToken(readJsonObjectsSetting.RootJsonPath) as JObject;
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.Error($"Error using '{readJsonObjectsSetting.RootJsonPath}': {ex.Message}");
+                    }
+                }
+            }
+
             return result;
         }
     }

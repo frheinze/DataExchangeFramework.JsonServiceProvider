@@ -13,6 +13,7 @@ using Sitecore.DataExchange.Processors.PipelineSteps;
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
 {
     [RequiredEndpointPlugins(typeof(JsonServiceEndpointSettings))]
+    [RequiredPipelineStepPlugins(typeof(EndpointSettings), typeof(ReadJsonObjectsSettings))]
     public class ReadJsonObjectsStepProcessor : BaseReadDataStepProcessor
     {
         protected override void ReadData(Endpoint endpoint, PipelineStep pipelineStep, PipelineContext pipelineContext)

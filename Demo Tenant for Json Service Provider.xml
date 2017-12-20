@@ -1,0 +1,118 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Demo Tenant for Json Service Provider</PackageName>
+      <Author>Friederike Heinze</Author>
+      <Version>1.4.1.2</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>Prerequisites:
+- Sitecore Data Exchange Framework 1.4.1
+- Sitecore Provider for Data Exchange Framework 1.4.1
+- Json Service Provider for Data Exchange Framework 1.4.1</Readme>
+      <Publisher>Friederike Heinze</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/{3A54FA34-2B0C-4176-9A74-DFFF471BFFF0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/{4C9B6AA8-6514-4A8A-9F25-2ACBB9E959A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Apply Mapping Rules/{492D0F65-689D-4F36-94B5-F7A41E44FADD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Apply Mapping Rules/Common/{4348E5A2-B9FF-4E35-B674-52D6A9D396E9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Apply Mapping Rules/Providers/{847560A0-4B75-48AD-9136-AABD702CA637}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Action Rules/{A2D4EF7F-32BE-4DCD-8E82-2EBC4B23C2EC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Action Rules/Common/{84638BF8-453A-4812-BF1B-367F13C6A0DC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Action Rules/Providers/{683596E1-6204-4791-A6F9-D671283C7677}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Actions/{5D67FAFD-BB60-49D8-A116-B7CF0DB4CAD4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Actions/Common/{4899C2F2-62AC-4C65-91B1-BA34973A3841}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Mappings Applied Actions/Providers/{EA6E40BA-E886-4144-BFB7-932D5AB71660}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/{EB18FB53-5EDA-48FE-B079-F5937174FAFB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Common/{FE980370-150C-4986-8791-55EEC9AC29DD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/{BC1BE3F5-81BB-4981-ABDC-EBB28B5611F6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Json Service/{DC8C588E-746A-4E85-9FB9-B85B9DCA3E50}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Json Service/Joke/{3F2F565B-15B2-48B9-B480-0BCA551584E7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Json Service/Joke/Id/{D22DD6E0-0593-43D0-8ADF-6E62F19EB0DC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Json Service/Joke/Value/{37A67EFC-E814-4942-BCD9-4EC665621712}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Sitecore/{13C08D4C-CBBC-4487-8954-80B0A6DBE732}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Sitecore/Joke/{E69F7B1D-768E-44AA-9FCD-F27FB496CCF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Sitecore/Joke/ExternalId/{FC213F9B-D722-41C9-99FF-233E6EC45161}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessor Sets/Providers/Sitecore/Joke/Text/{6348D6C5-0563-4DFA-9497-B2AD0DC00667}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessors/{13C1A27C-A62B-43E2-B198-C82334BEBFDD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessors/Common/{2F47FCAC-F027-4EB4-A6CA-425C07E8C571}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Accessors/Providers/{24438677-602D-4527-A664-29E0AAE2591F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Readers/{5F27BD62-5619-416A-95BC-3058A62DCC0D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Readers/Common/{10F1B706-04A7-413A-B2BE-52A7AED64D07}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Readers/Providers/{AB9BB7DF-E474-4455-A6B5-767F708AC200}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Writers/{147AE535-AFAF-4542-AAEC-319E4DE7883C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Writers/Common/{2ABF6B22-FEE6-4025-BBBA-40F94B8F76F6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Data Access/Value Writers/Providers/{A3465C93-95FA-4BEE-9F64-1E672289EC67}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/{15B407A2-C5FF-4AA2-85F7-0F55DB7DEE5A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Common/{F72521C8-772F-4381-A029-33ED34323991}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Providers/{C5A99199-627B-49C2-8B2D-54B4ACE43C1B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Providers/Json Service/{7568BF8F-AD3B-4E64-A046-8B264BEC4D00}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Providers/Json Service/Chuck Norris Jokes API/{B7A19E9E-38B1-4595-9A2C-D2BD9A084598}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Providers/Sitecore/{780D9DB0-6F9C-4D0A-8878-EF716C3B263B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Endpoints/Providers/Sitecore/Sitecore Joke Repository/{D9CD00FB-4FB0-4B89-A61B-A9FBDEAA3824}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipeline Batches/{19E62332-9293-4402-AD6B-CD2A5140186E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipeline Batches/Sync Jokes - Pipeline Batch/{45F162E2-110B-4CBC-9725-3531DB203DCC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/{F7D5CA0A-4821-4D09-9027-2EB66E2218E7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Joke - Pipeline/{A9767884-63CD-4B47-8FF1-61B0C7D80923}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Joke - Pipeline/1 Resolve Sitecore Item/{7DF94389-7483-4F0F-9E13-A96FAB9EFFC5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Joke - Pipeline/2 Apply Mapping/{505AF551-76B3-49F8-BBC1-C20DF2E03356}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Joke - Pipeline/3 Update Sitecore Item/{96108924-4257-4016-BD36-28F9E380AD39}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Jokes - Pipeline/{49A04B2C-4E19-46E1-A511-A26CB3E86495}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Jokes - Pipeline/1 Read Jokes/{79B1C93E-75FC-4656-AFE0-86C1743DD0F2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Pipelines/Sync Jokes - Pipeline/2 Iterate Jokes/{02EE8E80-B141-49C2-A7B3-1B9F79A7B547}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Queues/{0481520E-5C5F-474E-A6E6-C6DB1E29EAC6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Queues/Queue Processors/{D2E611FF-E5D6-4A01-B8F1-9993FC1C8006}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Queues/Queue Processors/Common/{5E4CEE5C-E6A7-4B16-96AA-C43D41420548}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Queues/Queue Processors/Providers/{53159C7B-3EFE-4C69-B83E-3C7AF4FC08BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Tenant Settings/{CE115D59-5A13-435C-B195-62AE37423AA6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Value Mapping Sets/{8BBB7BDD-FD6F-493B-AAE1-5D94B750BE89}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Value Mapping Sets/Joke/{720326C8-A8F7-4C7A-8315-10DC47A7CD32}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Value Mapping Sets/Joke/ExternalId/{3EF8028B-004C-4F3F-B1A8-6014EE9F0680}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Data Exchange/Json Service Provider Demo Tenant/Value Mapping Sets/Joke/Text/{6F444CED-CAFD-45E4-A649-5B866E19838B}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Tenant</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/User Defined/Joke/{2C8BC4D1-0DD6-4BCE-AC72-E072992291CF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/User Defined/Joke/Data/{EC086DA5-BE47-4C56-841E-7814C4BA1409}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/User Defined/Joke/Data/ExternalId/{52BCE6E6-253A-47A0-9A17-87A4B9EDDD40}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/User Defined/Joke/Data/Text/{266229A3-7C6A-4F9B-9D28-0854012CE76F}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Templates</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
