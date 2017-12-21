@@ -11,14 +11,6 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Plugins
 
         public string Protocol { get; set; }
 
-        #region Api
-
-        public string GetAll { get; set; }
-
-        public string GetById { get; set; }
-
-        #endregion
-
         #region Authorization
 
         public string Scheme { get; set; }

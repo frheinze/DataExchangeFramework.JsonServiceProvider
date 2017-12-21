@@ -6,5 +6,6 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Models
     {
         public const string EndpointFrom = "EndpointFrom";
         public const string RootJsonPath = "RootJsonPath";
+        public const string Api = "Api";
     }
 }

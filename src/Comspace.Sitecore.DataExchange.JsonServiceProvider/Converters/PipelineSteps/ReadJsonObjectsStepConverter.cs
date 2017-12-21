@@ -27,6 +27,7 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.Pipeline
 
             var settings = new ReadJsonObjectsSettings
             {
+                Api = GetStringValue(source, ReadJsonServiceStepItemModel.Api),
                 RootJsonPath = GetStringValue(source, ReadJsonServiceStepItemModel.RootJsonPath)
             };
             pipelineStep.Plugins.Add(settings);

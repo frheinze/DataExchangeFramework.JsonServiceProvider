@@ -23,8 +23,6 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Converters.Endpoint
             {
                 Host = GetStringValue(source, JsonServiceEndpointItemModel.Host),
                 Protocol = GetStringValue(source, JsonServiceEndpointItemModel.Protocol),
-                GetAll = GetStringValue(source, JsonServiceEndpointItemModel.ApiGetAll),
-                GetById = GetStringValue(source, JsonServiceEndpointItemModel.ApiGetById),
                 Scheme = GetStringValue(source, JsonServiceEndpointItemModel.AuthorizationScheme),
                 Parameter = GetStringValue(source, JsonServiceEndpointItemModel.AuthorizationParameter)
             };

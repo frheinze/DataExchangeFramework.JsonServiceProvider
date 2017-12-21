@@ -9,6 +9,7 @@ using Sitecore.DataExchange.Contexts;
 using Sitecore.DataExchange.Extensions;
 using Sitecore.DataExchange.Models;
 using Sitecore.DataExchange.Plugins;
+using Sitecore.Services.Core.Diagnostics;
 
 namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
 {
@@ -38,17 +39,21 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
                     else
                     {
                         var jsonServiceSettings = endpointFrom.GetPlugin<JsonServiceEndpointSettings>();
-                        if (jsonServiceSettings.Host == null)
+                        if (jsonServiceSettings.Host == null || jsonServiceSettings.Protocol == null)
                         {
-                            logger.Error("No 'Host' is specified on the endpoint. (pipeline step: {0}, endpoint: {1})", pipelineStep.Name, endpointFrom.Name);
-                        }
-                        else if (jsonServiceSettings.GetById == null)
-                        {
-                            logger.Error("No 'GetById' is specified on the endpoint. (pipeline step: {0}, endpoint: {1})", pipelineStep.Name, endpointFrom.Name);
+                            logger.Error("No 'Host' or 'Protocol' is specified on the endpoint. (pipeline step: {0}, endpoint: {1})", pipelineStep.Name, endpointFrom.Name);
                         }
                         else
                         {
-                            canProcess = true;
+                            var readJsonObjectsSettings = pipelineStep.GetPlugin<ReadJsonObjectsSettings>();
+                            if (readJsonObjectsSettings.Api == null)
+                            {
+                                logger.Error("No 'Api' is specified on the reader. (pipeline step: {0}, endpoint: {1})", pipelineStep.Name, endpointFrom.Name);
+                            }
+                            else
+                            {
+                                canProcess = true;
+                            }
                         }
                     }
                 }
@@ -73,7 +78,14 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
                 }
                 else
                 {
-                    var resolvedObject = ResolveObject(identifierValue, pipelineStep.GetEndpointSettings().EndpointFrom, pipelineStep, pipelineContext);
+                    var readJsonObjectsSettings = pipelineStep.GetPlugin<ReadJsonObjectsSettings>();
+                    var endpoint = pipelineStep.GetEndpointSettings().EndpointFrom;
+
+                    JObject jObject = ReadJsonData(endpoint, pipelineContext, readJsonObjectsSettings.Api, identifierValue);
+
+                    var resolvedObject = ExtractObject(readJsonObjectsSettings, logger, jObject);
+
+
 
                     SaveResolvedObject(pipelineStep, pipelineContext, resolvedObject);
                 }
@@ -97,22 +109,21 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
             }
         }
 
-        protected virtual JObject ResolveObject(string identifier, Endpoint endpoint, PipelineStep pipelineStep, PipelineContext pipelineContext)
+        private JObject ReadJsonData(Endpoint endpoint, PipelineContext pipelineContext, string api, string identifier)
         {
             var logger = pipelineContext.PipelineBatchContext.Logger;
-
             var endpointSettings = endpoint.GetPlugin<JsonServiceEndpointSettings>();
 
-            JObject result = null;
+            JObject jObject = null;
             try
             {
                 using (var client = new JsonRequestService().GetHttpClient(endpointSettings))
                 {
-                    var response = client.GetAsync(endpointSettings.GetById.Replace("{0}", identifier)).Result;
+                    var response = client.GetAsync(api.Replace("{0}", identifier)).Result;
                     switch (response.StatusCode)
                     {
                         case HttpStatusCode.OK:
-                            result = response.Content.ReadAsAsync<JObject>().Result;
+                            jObject = response.Content.ReadAsAsync<JObject>().Result;
                             logger.Debug($"Object loaded (Identifier={identifier})");
                             break;
                         case HttpStatusCode.NotFound:
@@ -127,29 +138,31 @@ namespace Comspace.Sitecore.DataExchange.JsonServiceProvider.Processors
             }
             catch (Exception ex)
             {
-                logger.Fatal("Error accessing json service. (exception={0}, host={1}, protocol={2}, api={3})",
-                             ex.GetBaseException().Message, endpointSettings.Host, endpointSettings.Protocol, endpointSettings.GetById);
+                logger.Fatal("Error accessing json service. (exception={0}, host={1}, protocol={2}, api={3})", ex.GetBaseException().Message, endpointSettings.Host, endpointSettings.Protocol, api);
                 pipelineContext.CriticalError = true;
             }
+            return jObject;
+        }
 
-            if (result != null)
+
+        private JObject ExtractObject(ReadJsonObjectsSettings readJsonObjectsSettings, ILogger logger, JObject jObject)
+        {
+            if (jObject != null)
             {
                 //select root node
-                var readJsonObjectsSetting = pipelineStep.GetPlugin<ReadJsonObjectsSettings>();
-                if (!string.IsNullOrEmpty(readJsonObjectsSetting?.RootJsonPath))
+                if (!string.IsNullOrEmpty(readJsonObjectsSettings?.RootJsonPath))
                 {
                     try
                     {
-                        result = result.SelectToken(readJsonObjectsSetting.RootJsonPath) as JObject;
+                        jObject = jObject.SelectToken(readJsonObjectsSettings.RootJsonPath) as JObject;
                     }
                     catch (Exception ex)
                     {
-                        logger.Error($"Error using '{readJsonObjectsSetting.RootJsonPath}': {ex.Message}");
+                        logger.Error($"Error using '{readJsonObjectsSettings.RootJsonPath}': {ex.Message}");
                     }
                 }
             }
-
-            return result;
+            return jObject;
         }
     }
 }
